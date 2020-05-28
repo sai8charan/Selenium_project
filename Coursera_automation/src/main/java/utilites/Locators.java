@@ -30,7 +30,8 @@ public class Locators {
 	private static final String language = "//body//div[@id='root']//div//div//div//div//div//div//div//div[1]//div[2]//div[6]//div[2]//h4[1]";
 	
 	//xPath for login link
-	private static final String login_Link = "//a[contains(text(),'Log In')]";	
+	private static final String login_Link = "//a[contains(text(),'Log In')]";
+	private static final String login_error_msg = "//span[contains(text(),'Something went wrong. Please refresh the page and')]";
 	
 	//xPaths for sign out
 	private static final String profile_Dropdown_menu="//body/div[@id='rendered-content']/div/div/span/div/header/div/div/div/div/div/div[@id='c-ph-right-nav']/ul[@id='authenticated-info-menu']/li/div/button[@id='right-nav-dropdown-btn']/div[1]";
@@ -138,6 +139,11 @@ public class Locators {
 	
 	public static String get_LoginLink(){
 		return login_Link;
+	
+	}
+	
+	public static String get_Loginerrmsg(){
+		return login_error_msg;
 	
 	}
 	

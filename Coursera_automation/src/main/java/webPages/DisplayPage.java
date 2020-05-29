@@ -1,36 +1,41 @@
 package webPages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import utilites.Locators;
+
 public class DisplayPage {
 
 	// Get course details 
-	public String getCourseName(String course_Name)
+	public static String getCourseName(WebDriver driver)
 	{
-		String Name = driver.findElement(By.xpath(course_Name)).getText();
+		String Name = driver.findElement(By.xpath(Locators.get_CourseName())).getText();
 		return Name;
 	}
 	
-	public String getRating(String ratings)
+	public static String getRating(WebDriver driver)
 	{
-		String Rating  = driver.findElement(By.xpath(ratings)).getText();
+		String Rating  = driver.findElement(By.xpath(Locators.get_Ratings())).getText();
 		return Rating;
 	}
 	
-	public String getLevel(String level)
+	public static String getLevel(WebDriver driver)
 	{
-		String Course_level = driver.findElement(By.xpath(level)).getText();
+		String Course_level = driver.findElement(By.xpath(Locators.get_level())).getText();
 		return Course_level;
 	}
 	
 	
-	public String getDuration(String duration)
+	public static String getDuration(WebDriver driver)
 	{
-		String Course_duration = driver.findElement(By.xpath(duration)).getText();
+		String Course_duration = driver.findElement(By.xpath(Locators.get_Duration())).getText();
 		return Course_duration;
 	}
 	
-	public String getLanguage(String language)
+	public static String getLanguage(WebDriver driver)
 	{
-		String lang  = driver.findElement(By.xpath(language)).getText();
+		String lang  = driver.findElement(By.xpath(Locators.get_Language())).getText();
 		return lang;
 	}
 	

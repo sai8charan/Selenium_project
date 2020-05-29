@@ -5,32 +5,32 @@ public class DisplayPage {
 	// Get course details 
 	public String getCourseName(String course_Name)
 	{
-		String Name = course_Nmae.getText();
+		String Name = driver.findElement(By.xpath(course_Name)).getText();
 		return Name;
 	}
 	
 	public String getRating(String ratings)
 	{
-		String Rating  = ratings.getText();
+		String Rating  = driver.findElement(By.xpath(ratings)).getText();
 		return Rating;
 	}
 	
 	public String getLevel(String level)
 	{
-		String Course_level = level.getText();
+		String Course_level = driver.findElement(By.xpath(level)).getText();
 		return Course_level;
 	}
 	
 	
 	public String getDuration(String duration)
 	{
-		String Course_duration = duration.getText();
+		String Course_duration = driver.findElement(By.xpath(duration)).getText();
 		return Course_duration;
 	}
 	
 	public String getLanguage(String language)
 	{
-		String lang  = language.getText();
+		String lang  = driver.findElement(By.xpath(language)).getText();
 		return lang;
 	}
 	

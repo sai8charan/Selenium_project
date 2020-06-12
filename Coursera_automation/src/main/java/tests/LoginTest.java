@@ -5,8 +5,8 @@ import org.openqa.selenium.*;
 import utilites.*;
 import webPages.LoginPage;
 public class LoginTest {
-	private static String valid_uname;
-	private static String valid_password;
+	private static String valid_uname="pvsc333@gmail.com";
+	private static String valid_password="Charan@98";
 	private static String user_n1;
 	private static String password1;
 	private static String user_n2;

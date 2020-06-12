@@ -22,7 +22,7 @@ public class LoginTest {
 		driver= DriverSetup.getWebDriver();
 		driver.get("https://www.coursera.org/?authMode=login");
 	}
-	@Test (priority=1)
+	@Test (priority=4)
 	public void validLogin() throws InterruptedException
 	{
 		try {

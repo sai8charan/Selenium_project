@@ -35,7 +35,7 @@ public class LoginTest {
 		 String Expected_Pagetitle = "\"Coursera | Online Courses & Credentials From Top Educators. Join for Free\"";
 		 Assert.assertEquals(ActualPagetitle, Expected_Pagetitle);
 		 Thread.sleep(3000);
-		 Sign_out.sign_out(driver);; 
+		 Sign_out.sign_out(driver); 
 	}
 	@Test (priority=2)
 	public void invalidLogin1() {

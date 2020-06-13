@@ -25,8 +25,8 @@ public class Testvia_un_password {
 	
 	@Test(priority = 1)
 	public void validLogin() throws InterruptedException
-	{    String valid_uname = ExcelData.desiredFile(0, 1, 1);
-	     String valid_password = ExcelData.desiredFile(0, 1, 2);
+	{    String valid_uname = ExcelData.desiredCell(0, 1, 1);
+	     String valid_password = ExcelData.desiredCell(0, 1, 2);
 		
 		try {
 			LoginPage.loginViaUN_PASS(driver, valid_uname, valid_password);

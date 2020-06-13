@@ -16,7 +16,7 @@ public class ExcelData {
 	//store course details
 	
 	// Method to select specific information from an excel spreadsheet
-		public static String desiredFile(int desiredsheet, int desiredRow, int desiredCell) {
+		public static String desiredCell(int desiredsheet, int desiredRow, int desiredCell) {
 
 			XSSFWorkbook wb;
 			FileInputStream file;

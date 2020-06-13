@@ -7,8 +7,10 @@ import org.testng.annotations.Test;
 
 import utilites.DriverSetup;
 import utilites.ExcelData;
+import webPages.DisplayPage;
 import webPages.HomePage;
 import webPages.LoginPage;
+import webPages.ResultPage;
 
 public class Testvia_un_password {
 
@@ -52,10 +54,39 @@ public class Testvia_un_password {
 	}
 	
 	//pagination
+	@Test(priority = 3)
+	public void VerifyPagination()
+	{
+		int totalResults =ResultPage.getTotalResults(driver);
+		int totalPages = ResultPage.getnoPages(driver);
+		Assert.assertTrue(totalPages*10>=totalResults);
+	}
 	
 	//courses
-	
-	
+	@Test(priority=4)
+	public void getCourseDetails1()
+	{   String courseDetails[];
+	    courseDetails= new String[5];
+		ResultPage.select_Course1(driver);
+		courseDetails[0]=DisplayPage.getCourseName(driver);
+		courseDetails[1]=DisplayPage.getDuration(driver);
+		courseDetails[2]=DisplayPage.getLanguage(driver);
+		courseDetails[3]=DisplayPage.getRating(driver);
+		
+		
+	}
+	@Test(priority = 5)
+	public void getCourseDetails2(){
+		String courseDetails[];
+	    courseDetails= new String[5];
+		ResultPage.select_Course1(driver);
+		courseDetails[0]=DisplayPage.getCourseName(driver);
+		courseDetails[1]=DisplayPage.getDuration(driver);
+		courseDetails[2]=DisplayPage.getLanguage(driver);
+		courseDetails[3]=DisplayPage.getRating(driver);
+		
+		
+	}
 	
 	
 	
